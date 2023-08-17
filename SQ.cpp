@@ -31,7 +31,7 @@ int main (void)
 {
 double a, b, c;
 
-printf ("Enter odds \n");
+printf ("Enter coefficient \n");
     scanf ("%lf", &a);
     scanf ("%lf", &b);
     scanf ("%lf", &c);
