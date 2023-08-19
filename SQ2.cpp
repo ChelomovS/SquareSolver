@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <iso646.h>
 #include <math.h>
-
 double discr (double a, double b,double c)
 {
   double d=b*b-4*a*c;
@@ -18,6 +17,16 @@ void root2 (double a,double b,double c)
   double d= discr (a, b, c);
   double r2= (-b - sqrt(d))/(2*a);
   printf ("Second root: %.3lf \n", r2);
+}
+void input (double* a, double* b, double* c)
+{
+  double pa,pb,pc;
+  scanf ("%lf", &pa);
+  *a=pa;
+  scanf ("%lf", &pb);
+  *b=pb;
+  scanf ("%lf", &pc);
+  *c=pc;
 }
 void output (double a, double b, double c)
 {
@@ -41,10 +50,7 @@ void output (double a, double b, double c)
 int main (void)
 {
   double a, b, c;
-  printf ("Enter coefficient \n");
-  scanf ("%lf", &a);
-  scanf ("%lf", &b);
-  scanf ("%lf", &c);
+  input (&a, &b, &c);
   output(a,b,c);
   return 0;
 }
