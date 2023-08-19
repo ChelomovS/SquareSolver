@@ -20,6 +20,7 @@ void root2 (double a,double b,double c)
 }
 void input (double* a, double* b, double* c)
 {
+  printf ("Enter coefficients")
   double pa,pb,pc;
   scanf ("%lf", &pa);
   *a=pa;
