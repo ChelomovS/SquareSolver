@@ -1,9 +1,7 @@
 #include <cstdio>
 #include <cassert>
 #include <cmath>
-
-enum n_roots {ZERO = 0, ONE = 1, TWO = 2, INF_ROOTS= 8, LINEAR = 3};
-const double EPS = 0.0000001;
+#include "consts.h"
 
 int solve_linear_square (double b, double c, double* x1)
 {
@@ -69,4 +67,5 @@ int solve_square (double a, double b, double c, double* x1, double* x2)
             sort_roots(x1, x2);
             return TWO;
         }
+        return 0;
 }

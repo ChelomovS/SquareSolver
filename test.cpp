@@ -2,10 +2,14 @@
 #include <cassert>
 #include <cmath>
 #include "solve_square.h"
+#include "consts.h"
 
-enum n_roots {ZERO = 0, ONE = 1, TWO = 2, INF_ROOTS = 8, LINEAR = 3 };
-const double EPS = 0.000001;
-const int N_TESTS = 5;
+bool compare_numbers(double n1, double n2)
+{
+if (fabs (n1-n2) < EPS)
+return false;
+else return true;
+};
 
 struct TestData
 {
@@ -35,7 +39,7 @@ int Test_one (const struct TestData* allData)
     const char* name = allData -> name;
     double x1ref = allData -> x1ref;
     double x2ref = allData -> x2ref;
-    if (fabs(x1 - x1ref)>EPS or fabs(x2-x2ref)>EPS or n_roots!=n_rootsref)
+    if (compare_numbers (x1, x1ref) || compare_numbers(x2, x2ref) || n_roots!=n_rootsref)
         {
             printf ("%s FAILED: x1 = %lf, x2 = %lf, n_roots = %d, EXPECTED: x1ref = %lf, x2ref = %lf, n_rootsref = %d \n", name, x1, x2, n_roots, x1ref, x2ref, n_rootsref);
             return 0;
