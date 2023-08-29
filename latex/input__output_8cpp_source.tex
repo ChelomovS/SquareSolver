@@ -1,0 +1,111 @@
+\doxysection{input\+\_\+output.\+cpp}
+\hypertarget{input__output_8cpp_source}{}\label{input__output_8cpp_source}\mbox{\hyperlink{input__output_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{consts_8h}{consts.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00011}\mbox{\hyperlink{input__output_8cpp_a876d5723d0511f25736dcd24ef3fd437}{00011}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input__output_8cpp_a876d5723d0511f25736dcd24ef3fd437}{clear\_buffer}}\ (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{while}\ (getchar()\ !=\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00020}\mbox{\hyperlink{input__output_8cpp_a4c9969fd5b429fa1945e81bc46d7daf4}{00020}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{input__output_8cpp_a4c9969fd5b429fa1945e81bc46d7daf4}{select\_input}}\ (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{int}\ k\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00023}00023\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Выберите\ способ\ ввода\ коэффициентов\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}1)\ ввод\ с\ клавиатуры\ 2)\ ввод\ из\ файла\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{while}\ ((scanf\ (\textcolor{stringliteral}{"{}\%d"{}},\ \&k)!=1)\ ||\ ((k!=1)\ \&\&\ (k!=2)))}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}Попробуйте\ ещё\ раз\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input__output_8cpp_a876d5723d0511f25736dcd24ef3fd437}{clear\_buffer}}();}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{if}\ (k\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (k\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00040}\mbox{\hyperlink{input__output_8cpp_a533d981baf16de49e5365ee5d991c59e}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input__output_8cpp_a533d981baf16de49e5365ee5d991c59e}{input\_coeffs\_kb}}\ (\textcolor{keywordtype}{double}*\ a,\ \textcolor{keywordtype}{double}*\ b,\ \textcolor{keywordtype}{double}*\ c)}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00042}00042\ \ \ \ \ assert\ (a\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00043}00043\ \ \ \ \ assert\ (b\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00044}00044\ \ \ \ \ assert\ (c\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00046}00046\ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}Введите\ коэффициенты\ квадратного\ уравнения\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{while}\ (scanf\ (\textcolor{stringliteral}{"{}\%lf\ \%lf\ \%lf"{}},\ a,\ b\ ,c)\ !=\ 3)}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input__output_8cpp_a876d5723d0511f25736dcd24ef3fd437}{clear\_buffer}}();}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}Ошибка\ ввода.\ Введите\ коэффициенты\ еще\ раз\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (isfinite(*a)\ ||\ isfinite\ (*b)\ ||\ isfinite(*c))}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}Числа\ слишком\ большие\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00058}00058\ \ \ \ \ assert\ (isfinite(*a));}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00059}00059\ \ \ \ \ assert\ (isfinite(*b));}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00060}00060\ \ \ \ \ assert\ (isfinite(*c));}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00067}\mbox{\hyperlink{input__output_8cpp_ab8df70330a76c422c97ab0050f8c0769}{00067}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input__output_8cpp_ab8df70330a76c422c97ab0050f8c0769}{input\_coeffs\_file}}\ (\textcolor{keywordtype}{double}*\ a,\ \textcolor{keywordtype}{double}*\ b,\ \textcolor{keywordtype}{double}*\ c)}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00068}00068\ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00069}00069\ \ \ \ assert\ (a\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00070}00070\ \ \ \ assert\ (b\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00071}00071\ \ \ \ assert\ (c\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00072}00072\ \ \ \ printf\ (\textcolor{stringliteral}{"{}Введите\ имя\ файла\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00073}00073\ \ \ \ \textcolor{keywordtype}{char}\ name\_of\_file[90]\ =\ \{\};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00074}00074\ \ \ \ scanf(\textcolor{stringliteral}{"{}\%s"{}},\ name\_of\_file);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00075}00075\ \ \ \ FILE\ *file\ =\ fopen\ (name\_of\_file,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00076}00076\ \ \ \ \textcolor{keywordflow}{while}(fscanf\ (file,\ \textcolor{stringliteral}{"{}\%lf\ \%lf\ \%lf"{}},\ a,\ b,\ c)!=3)}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00077}00077\ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00078}00078\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Ошибка\ ввода\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00079}00079\ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}Введите\ с\ клавиатуры\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00080}00080\ \ \ \ \ \ \ \mbox{\hyperlink{input__output_8cpp_a533d981baf16de49e5365ee5d991c59e}{input\_coeffs\_kb}}(a,\ b,\ c);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00081}00081\ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00082}00082\ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00083}00083\ \ \ \ fclose(file);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00085}00085\ \ \ \ \textcolor{keywordflow}{if}\ (isfinite(*a)\ \&\&\ isfinite\ (*b)\ \&\&\ isfinite(*c))}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00087}00087\ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00088}00088\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}Числа\ слишком\ большие\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input__output_8cpp_a876d5723d0511f25736dcd24ef3fd437}{clear\_buffer}}();}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00093}00093\ \ \ \ \ assert\ (isfinite(*a));}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00094}00094\ \ \ \ \ assert\ (isfinite(*b));}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00095}00095\ \ \ \ \ assert\ (isfinite(*c));}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00104}\mbox{\hyperlink{input__output_8cpp_a92541a5638511f550ce653caa515aae7}{00104}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{input__output_8cpp_a92541a5638511f550ce653caa515aae7}{output\_roots}}\ (\textcolor{keywordtype}{int}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9}{n\_roots}},\ \textcolor{keywordtype}{double}\ x1,\ \textcolor{keywordtype}{double}\ x2)}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00105}00105\ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9}{n\_roots}})}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00107}00107\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9ae117e3533122c80b262257b49b21cddf}{ZERO}}:\ printf(\textcolor{stringliteral}{"{}Нет\ действительных\ корней\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a7a725f13af144bdef532d0389ba75e0d}{ONE}}:\ printf(\textcolor{stringliteral}{"{}Корень\ уравнения\ -\/\ \%.2lf\ \(\backslash\)n"{}},\ x1);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a0e793500a63ffa575b9b712ca3bc9851}{TWO}}:\ printf(\textcolor{stringliteral}{"{}Корни\ квадратного\ уравнения\ \%.2lf\ и\ \%.2lf\ \(\backslash\)n"{}},\ x1,\ x2);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR}}:\ printf\ (\textcolor{stringliteral}{"{}Уравнение\ линейное,\ его\ корень\ \%.2lf\ \(\backslash\)n"{}},\ x1);}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a5a79e9e49077da58fe5d46a98f0b5e36}{INF\_ROOTS}}:\ printf\ (\textcolor{stringliteral}{"{}У\ уравнения\ бесконечное\ множество\ корней\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ printf\ (\textcolor{stringliteral}{"{}Error\ \(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00125}00125\ \}}
+\DoxyCodeLine{\Hypertarget{input__output_8cpp_source_l00126}00126\ }
+
+\end{DoxyCode}

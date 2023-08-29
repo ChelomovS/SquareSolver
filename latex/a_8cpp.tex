@@ -1,0 +1,42 @@
+\doxysection{a.\+cpp File Reference}
+\hypertarget{a_8cpp}{}\label{a_8cpp}\index{a.cpp@{a.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{a_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{a_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{a.cpp@{a.cpp}!main@{main}}
+\index{main@{main}!a.cpp@{a.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{a_8cpp_source}{a.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \textcolor{keywordtype}{int}\ a=0,\ b=0,\ c=0,\ n1=0,\ n2=0;}
+\DoxyCodeLine{00006\ scanf\ (\textcolor{stringliteral}{"{}\%d\ \%d\ \%d"{}},\ \&a,\ \&b,\ \&c\ );}
+\DoxyCodeLine{00007\ \textcolor{keywordflow}{if}\ (a>b\ \&\&\ a>c)}
+\DoxyCodeLine{00008\ n1=a;}
+\DoxyCodeLine{00009\ \textcolor{keywordflow}{if}\ (b>a\ \&\&\ c>a)}
+\DoxyCodeLine{00010\ n1=b;}
+\DoxyCodeLine{00011\ \textcolor{keywordflow}{if}\ (c>b\ \&\&\ c>a)}
+\DoxyCodeLine{00012\ n1=c;}
+\DoxyCodeLine{00013\ \textcolor{keywordflow}{if}\ (a<b\ \&\&\ a<c)}
+\DoxyCodeLine{00014\ n2=a;}
+\DoxyCodeLine{00015\ \textcolor{keywordflow}{if}\ (b<c\ \&\&\ b<c)}
+\DoxyCodeLine{00016\ n2=b;}
+\DoxyCodeLine{00017\ \textcolor{keywordflow}{if}\ (c<a\ \&\&\ c<b)}
+\DoxyCodeLine{00018\ n2\ =\ c;}
+\DoxyCodeLine{00019\ printf\ (\textcolor{stringliteral}{"{}\%d"{}},\ n1-\/n2);}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,78 @@
+\doxysection{solve\+\_\+square.\+cpp}
+\hypertarget{solve__square_8cpp_source}{}\label{solve__square_8cpp_source}\mbox{\hyperlink{solve__square_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{consts_8h}{consts.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00012}\mbox{\hyperlink{input__output_8h_aafec5c40d2fb71ab412c4c42fc1a2c4f}{00012}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}\ (\textcolor{keywordtype}{double}\ n)}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (fabs(n)\ <\ \mbox{\hyperlink{consts_8h_afe01386a82fedc016455a43c20280a97}{EPS}})}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00026}\mbox{\hyperlink{solve__square_8cpp_a450c384475c1a3f201cd608a0be57917}{00026}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{solve__square_8cpp_a450c384475c1a3f201cd608a0be57917}{solve\_linear}}\ (\textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}*\ x1)}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(b))}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9ae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ -\/c/b;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR}};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00040}\mbox{\hyperlink{solve__square_8cpp_ac6b7b53e352d9357e455d60761d3bf80}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{solve__square_8cpp_ac6b7b53e352d9357e455d60761d3bf80}{sort\_roots}}\ (\textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2\ )}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{double}\ tmp\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (*x1\ >\ *x2)}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ tmp\ =\ *x1;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ *x2;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ *x2\ =\ tmp;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00057}\mbox{\hyperlink{solve__square_8cpp_aaff927290f6b2ccdca47881b30bf253a}{00057}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{solve__square_8cpp_aaff927290f6b2ccdca47881b30bf253a}{solve\_square}}\ (\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2)}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00058}00058\ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00059}00059\ \ \ \ \ assert\ (isfinite\ (a));}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00060}00060\ \ \ \ \ assert\ (isfinite\ (b));}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00061}00061\ \ \ \ \ assert\ (isfinite\ (c));}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00063}00063\ \ \ \ \ assert\ (x1\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00064}00064\ \ \ \ \ assert\ (x2\ !=\ NULL);}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{double}\ tmp\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{double}\ d\ =\ b*b\ -\/\ 4*a*c;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(a)\ \&\&\ \mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(b)\ \&\&\ !(\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}\ (c)))}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9ae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(a)\ \&\&\ \mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(b)\ \&\&\ \mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(c))}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a5a79e9e49077da58fe5d46a98f0b5e36}{INF\_ROOTS}};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (a\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ tmp\ =\ \mbox{\hyperlink{solve__square_8cpp_a450c384475c1a3f201cd608a0be57917}{solve\_linear}}(b,\ c,\ x1);}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tmp;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(d))}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ (-\/b\ +\ sqrt(d))/(2*a);}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a7a725f13af144bdef532d0389ba75e0d}{ONE}};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (d\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9ae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (d\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ (-\/b\ -\/\ sqrt(d))/(2*a);}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ *x2\ =\ (-\/b\ +\ sqrt(d))/(2*a);}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{solve__square_8cpp_ac6b7b53e352d9357e455d60761d3bf80}{sort\_roots}}(x1,\ x2);}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a0e793500a63ffa575b9b712ca3bc9851}{TWO}};}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{solve__square_8cpp_source_l00095}00095\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,70 @@
+\doxysection{Square.\+cpp File Reference}
+\hypertarget{_square_8cpp}{}\label{_square_8cpp}\index{Square.cpp@{Square.cpp}}
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \"{}input\+\_\+output.\+h\"{}}\newline
+{\ttfamily \#include \"{}test.\+h\"{}}\newline
+{\ttfamily \#include \"{}solve\+\_\+square.\+h\"{}}\newline
+{\ttfamily \#include \"{}consts.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_square_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_square_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{_square_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+\index{Square.cpp@{Square.cpp}!main@{main}}
+\index{main@{main}!Square.cpp@{Square.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\texorpdfstring{$<$}{<} коэффициенты квадртатного уравнения
+
+\texorpdfstring{$<$}{<} корни кваратного уравненния
+
+\texorpdfstring{$<$}{<} количество корней уравнения //энам
+
+Definition at line \mbox{\hyperlink{_square_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{_square_8cpp_source}{Square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ a\ =\ 0,\ b\ =\ 0,\ c\ =\ 0;\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ x1\ =\ 0,\ x2\ =\ 0;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9}{n\_roots}}\ =\ 0;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=1;\ i<argc;\ i++)}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (argv[i][1]==\ \textcolor{charliteral}{'n'})\ \textcolor{comment}{//\ "{}./SQE\ tn"{}}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{input__output_8cpp_a4c9969fd5b429fa1945e81bc46d7daf4}{select\_input}}())}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input__output_8cpp_a533d981baf16de49e5365ee5d991c59e}{input\_coeffs\_kb}}\ (\&a,\ \&b,\ \&c);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input__output_8cpp_ab8df70330a76c422c97ab0050f8c0769}{input\_coeffs\_file}}\ (\&a,\ \&b,\ \&c);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9}{n\_roots}}\ =\ \mbox{\hyperlink{solve__square_8cpp_aaff927290f6b2ccdca47881b30bf253a}{solve\_square}}\ (a,\ b,\ c,\ \&x1,\ \&x2);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{input__output_8cpp_a92541a5638511f550ce653caa515aae7}{output\_roots}}\ (\mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9}{n\_roots}},\ x1,\ x2);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (argv[i][1]==\ \textcolor{charliteral}{'t'})}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{test_8cpp_a00ffaacc5616e79c2d16e4539b45ed13}{Test\_all}}();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (argv[i][1]==\ \textcolor{charliteral}{'h'})}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}Аргументы\ командной\ строки:\(\backslash\)n"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}1)\ -\/h\ -\/\ вызывает\ описание\ аргументов\ командной\ строки\(\backslash\)n"{}});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}2)\ -\/t\ -\/\ включает\ вывод\ тестов\(\backslash\)n"{}});}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf\ (\textcolor{stringliteral}{"{}3)\ -\/n\ -\/\ вызывает\ обычный\ запуск\ программы\(\backslash\)n"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{input__output_8cpp_source_l00067}{input\+\_\+coeffs\+\_\+file()}}, \mbox{\hyperlink{input__output_8cpp_source_l00040}{input\+\_\+coeffs\+\_\+kb()}}, \mbox{\hyperlink{input__output_8cpp_source_l00104}{output\+\_\+roots()}}, \mbox{\hyperlink{input__output_8cpp_source_l00020}{select\+\_\+input()}}, \mbox{\hyperlink{solve__square_8cpp_source_l00057}{solve\+\_\+square()}}, and \mbox{\hyperlink{test_8cpp_source_l00071}{Test\+\_\+all()}}.
+

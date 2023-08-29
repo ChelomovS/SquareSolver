@@ -1,0 +1,219 @@
+\doxysection{solve\+\_\+square.\+h File Reference}
+\hypertarget{solve__square_8h}{}\label{solve__square_8h}\index{solve\_square.h@{solve\_square.h}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{solve__square_8h_a450c384475c1a3f201cd608a0be57917}{solve\+\_\+linear}} (double b, double c, double \texorpdfstring{$\ast$}{*}x1)
+\begin{DoxyCompactList}\small\item\em Решает линейное уравнение \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{solve__square_8h_aaff927290f6b2ccdca47881b30bf253a}{solve\+\_\+square}} (double a, double b, double c, double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em Решает квадратное уравнение \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{solve__square_8h_a3d0ec955af1ded692c47d9d7e0f10e05}{sorting\+\_\+roots}} (double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2)
+\item 
+bool \mbox{\hyperlink{solve__square_8h_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\+\_\+zero}} (double n)
+\begin{DoxyCompactList}\small\item\em Сравнивает число типа double с нулем \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{solve__square_8h_a4abc35d2bfcb6836df320b69290f3de6}{compare\+\_\+numbers}} (double n1, double n2)
+\begin{DoxyCompactList}\small\item\em Сравнивает два числа типа double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{solve__square_8h_a4abc35d2bfcb6836df320b69290f3de6}\label{solve__square_8h_a4abc35d2bfcb6836df320b69290f3de6} 
+\index{solve\_square.h@{solve\_square.h}!compare\_numbers@{compare\_numbers}}
+\index{compare\_numbers@{compare\_numbers}!solve\_square.h@{solve\_square.h}}
+\doxysubsubsection{\texorpdfstring{compare\_numbers()}{compare\_numbers()}}
+{\footnotesize\ttfamily bool compare\+\_\+numbers (\begin{DoxyParamCaption}\item[{double}]{n1,  }\item[{double}]{n2 }\end{DoxyParamCaption})}
+
+
+
+Сравнивает два числа типа double. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n1,n2} & -\/ сравниваемые числа \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает значние false, если числа равны или true, если они не равны 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{test_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{test_8cpp_source}{test.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordflow}{if}\ (fabs\ (n1-\/n2)\ <\ \mbox{\hyperlink{consts_8h_afe01386a82fedc016455a43c20280a97}{EPS}})}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00019\ \};}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{consts_8h_source_l00017}{EPS}}.
+
+
+
+Referenced by \mbox{\hyperlink{test_8cpp_source_l00048}{Test\+\_\+one()}}.
+
+\Hypertarget{solve__square_8h_aafec5c40d2fb71ab412c4c42fc1a2c4f}\label{solve__square_8h_aafec5c40d2fb71ab412c4c42fc1a2c4f} 
+\index{solve\_square.h@{solve\_square.h}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!solve\_square.h@{solve\_square.h}}
+\doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
+{\footnotesize\ttfamily bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{n }\end{DoxyParamCaption})}
+
+
+
+Сравнивает число типа double с нулем 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n} & Сравниваемое число \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает значение типа bool\+: true -\/ если число является нулем, и false -\/ если число не является нулем 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{solve__square_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{solve__square_8cpp_source}{solve\+\_\+square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (fabs(n)\ <\ \mbox{\hyperlink{consts_8h_afe01386a82fedc016455a43c20280a97}{EPS}})}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{solve__square_8cpp_source_l00026}{solve\+\_\+linear()}}, and \mbox{\hyperlink{solve__square_8cpp_source_l00057}{solve\+\_\+square()}}.
+
+\Hypertarget{solve__square_8h_a450c384475c1a3f201cd608a0be57917}\label{solve__square_8h_a450c384475c1a3f201cd608a0be57917} 
+\index{solve\_square.h@{solve\_square.h}!solve\_linear@{solve\_linear}}
+\index{solve\_linear@{solve\_linear}!solve\_square.h@{solve\_square.h}}
+\doxysubsubsection{\texorpdfstring{solve\_linear()}{solve\_linear()}}
+{\footnotesize\ttfamily int solve\+\_\+linear (\begin{DoxyParamCaption}\item[{double}]{b,  }\item[{double}]{c,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x1 }\end{DoxyParamCaption})}
+
+
+
+Решает линейное уравнение 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b,c} & -\/ коэффициенты линейного уравнения; \\
+\hline
+\mbox{\texttt{ out}}  & {\em x1} & -\/ адрес первого корня \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает количество корней 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{solve__square_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{solve__square_8cpp_source}{solve\+\_\+square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(b))}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9ae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ -\/c/b;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9adc101ebf31c49c2d4b80b7c6f59f22cb}{LINEAR}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{solve__square_8cpp_source_l00012}{is\+\_\+zero()}}, \mbox{\hyperlink{consts_8h_source_l00014}{LINEAR}}, and \mbox{\hyperlink{consts_8h_source_l00010}{ZERO}}.
+
+
+
+Referenced by \mbox{\hyperlink{solve__square_8cpp_source_l00057}{solve\+\_\+square()}}.
+
+\Hypertarget{solve__square_8h_aaff927290f6b2ccdca47881b30bf253a}\label{solve__square_8h_aaff927290f6b2ccdca47881b30bf253a} 
+\index{solve\_square.h@{solve\_square.h}!solve\_square@{solve\_square}}
+\index{solve\_square@{solve\_square}!solve\_square.h@{solve\_square.h}}
+\doxysubsubsection{\texorpdfstring{solve\_square()}{solve\_square()}}
+{\footnotesize\ttfamily int solve\+\_\+square (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x1,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Решает квадратное уравнение 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a,b,c} & -\/ коэффициенты квадратного уравнения \\
+\hline
+\mbox{\texttt{ out}}  & {\em x1,x2} & -\/ адреса первого и второго корней \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Возвращает количество корней 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{solve__square_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{solve__square_8cpp_source}{solve\+\_\+square.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ assert\ (isfinite\ (a));}
+\DoxyCodeLine{00060\ \ \ \ \ assert\ (isfinite\ (b));}
+\DoxyCodeLine{00061\ \ \ \ \ assert\ (isfinite\ (c));}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ assert\ (x1\ !=\ NULL);}
+\DoxyCodeLine{00064\ \ \ \ \ assert\ (x2\ !=\ NULL);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{double}\ tmp\ =\ 0;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{double}\ d\ =\ b*b\ -\/\ 4*a*c;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(a)\ \&\&\ \mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(b)\ \&\&\ !(\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}\ (c)))}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9ae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(a)\ \&\&\ \mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(b)\ \&\&\ \mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(c))}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a5a79e9e49077da58fe5d46a98f0b5e36}{INF\_ROOTS}};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (a\ ==\ 0)}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ tmp\ =\ \mbox{\hyperlink{solve__square_8cpp_a450c384475c1a3f201cd608a0be57917}{solve\_linear}}(b,\ c,\ x1);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tmp;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{solve__square_8cpp_aafec5c40d2fb71ab412c4c42fc1a2c4f}{is\_zero}}(d))}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ (-\/b\ +\ sqrt(d))/(2*a);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a7a725f13af144bdef532d0389ba75e0d}{ONE}};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (d\ <\ 0)}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9ae117e3533122c80b262257b49b21cddf}{ZERO}};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (d\ >\ 0)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ *x1\ =\ (-\/b\ -\/\ sqrt(d))/(2*a);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ *x2\ =\ (-\/b\ +\ sqrt(d))/(2*a);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{solve__square_8cpp_ac6b7b53e352d9357e455d60761d3bf80}{sort\_roots}}(x1,\ x2);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{consts_8h_af1954ca261c52efd85acef90ff69a6c9a0e793500a63ffa575b9b712ca3bc9851}{TWO}};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{consts_8h_source_l00013}{INF\+\_\+\+ROOTS}}, \mbox{\hyperlink{solve__square_8cpp_source_l00012}{is\+\_\+zero()}}, \mbox{\hyperlink{consts_8h_source_l00011}{ONE}}, \mbox{\hyperlink{solve__square_8cpp_source_l00026}{solve\+\_\+linear()}}, \mbox{\hyperlink{solve__square_8cpp_source_l00040}{sort\+\_\+roots()}}, \mbox{\hyperlink{consts_8h_source_l00012}{TWO}}, and \mbox{\hyperlink{consts_8h_source_l00010}{ZERO}}.
+
+
+
+Referenced by \mbox{\hyperlink{_square_8cpp_source_l00021}{main()}}, and \mbox{\hyperlink{test_8cpp_source_l00048}{Test\+\_\+one()}}.
+
+\Hypertarget{solve__square_8h_a3d0ec955af1ded692c47d9d7e0f10e05}\label{solve__square_8h_a3d0ec955af1ded692c47d9d7e0f10e05} 
+\index{solve\_square.h@{solve\_square.h}!sorting\_roots@{sorting\_roots}}
+\index{sorting\_roots@{sorting\_roots}!solve\_square.h@{solve\_square.h}}
+\doxysubsubsection{\texorpdfstring{sorting\_roots()}{sorting\_roots()}}
+{\footnotesize\ttfamily void sorting\+\_\+roots (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{x1,  }\item[{double \texorpdfstring{$\ast$}{*}}]{x2 }\end{DoxyParamCaption})}
+
